@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                                            %%
+%%    Template Created by                                                      %%
+%%    Zachary Greif                                                                  %%
+%%    zsgreif@iastate.edu                                                       %%
+%%                                                                                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Packages
+%Most of these aren't used in your average assignment.
+\usepackage{pictex, latexsym, graphicx,amsmath,amssymb,amsbsy,amsfonts,amsthm,verbatim}
+\usepackage{graphics}
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{algorithm,algorithmic}
+\usepackage{multirow}
+
+
+%Page Settings
+\setlength{\voffset}{-0.25in}
+\setlength{\headsep}{0.25in}
+\setlength{\parskip}{.25em}
+\setlength{\parindent}{0em}
+
+
+
+
+%Logical Operators.
+\renewcommand{\implies}{\rightarrow}
+%\newcommand{\lnot}{\neg} %%%%%already defined
+\renewcommand{\lor}{\vee}
+\renewcommand{\land}{\wedge}
+\newcommand{\xor}{\oplus}
+\newcommand{\symmdiff}{\triangle}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\TRUE}{\mathbf{T}}
+\newcommand{\FALSE}{\mathbf{F}}
+\newcommand{\universe}{\mathcal{U}}
+
+
+%Use to separate sections on the same page
+\renewcommand{\bar}{\rule{\textwidth}{1pt}}
+\newcommand{\barbig}{\rule{\textwidth}{3pt}}
+
+%Euclidean metrics???
+\newcommand{\abs}[1]{| #1 |}
+\newcommand{\norm}[1]{|| #1 ||}
+\newcommand{\bigabs}[1]{\left| #1 \right|}
+
+%Used to denote a new problem
+\newcommand{\problem}[1]{\textbf{#1:}}
+
+\newcommand{\skiplines}[1]{\vspace*{ #1 \baselineskip}}
+
+\newcommand{\vecthree}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \\ \end{array}\right)}
+
+%Use these to make a mess
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+%Common Sets
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\Z{\mathbb{Z}}
+\def\R{\mathbb{R}}
+\def\cP{\mathcal{P}}
+%Used because normal O is dumb
+\def\bigoh{\mathcal{O}}
+
+\newcommand{\ideal}[1]{\langle #1 \rangle}
+\renewcommand{\dh}{\hat{\delta}}
+\newcommand{\Dh}{\hat{\Delta}}
+
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\im}{Im}
+
+
+\begin{document}
+\pagestyle{fancyplain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chead{<Class Name> --- <Homework Name> --- Zachary Greif}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\end{document} 
