@@ -19,7 +19,17 @@
 \usepackage{hyperref}
 \usepackage{algorithm,algorithmic}
 \usepackage{multirow}
-
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{lipsum}
+\mdfdefinestyle{MyFrame}{%
+    linecolor=black,
+    outerlinewidth=1pt,
+    roundcorner=20pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=20pt,
+    innerleftmargin=20pt,
+    backgroundcolor=white}
 
 %Page Settings
 \setlength{\voffset}{-0.25in}
@@ -27,7 +37,9 @@
 \setlength{\parskip}{.25em}
 \setlength{\parindent}{0em}
 
-
+\newenvironment{answer}
+  {\begin{mdframed}[style=MyFrame]}
+  {\end{mdframed}}
 
 
 %Logical Operators.
