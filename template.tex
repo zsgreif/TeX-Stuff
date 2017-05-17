@@ -71,12 +71,18 @@
 
 \newcommand{\vecthree}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \\ \end{array}\right)}
 
-%Use these to make a mess
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Corollary}
+
 \theoremstyle{definition}
-\newtheorem{definition}{Def}
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}[theorem]
-\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{notation}{Notation}
+\newtheorem*{observation}{Observation}
+\newtheorem*{convention}{Convention}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{example}{Example}
 
 %Common Sets
 \def\N{\mathbb{N}}
