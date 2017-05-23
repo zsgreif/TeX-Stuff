@@ -18,6 +18,7 @@
 \usepackage{enumerate}
 \usepackage{fancyhdr}
 \usepackage{mathtools}
+\usepackage{tikz-cd}
 %\usepackage{hyperref}
 %\usepackage{algorithm,algorithmic}
 %\usepackage{multirow}
@@ -108,6 +109,17 @@
 \newcommand{\dsum}{\oplus}
 \newcommand{\bigdsum}{\bigoplus}
 \newcommand{\cat}{\mathbf}
+
+%arrow hacks
+%Usage: #2 -#4-> #3; #1 optional underneath
+\newcommand{\xrightleftarrows}[4][]{
+\begin{tikzcd}[ampersand replacement=\&] 
+  #2 \arrow[r, "#4"] 
+     \& #3 
+       \arrow[l,shift left, "#1"]
+\end{tikzcd}}
+
+
 
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\im}{Im}
