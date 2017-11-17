@@ -1,139 +1,29 @@
-%%    Zachary Greif
-%%    zsgreif@iastate.edu
+%zsgreif@iastate.edu
 
-\documentclass[11pt]{article}
+\documentclass{article}
 
-%Packages
-%Most of these aren't used in your average assignment.
-\usepackage{pictex, latexsym, graphicx,amsmath,amssymb,amsbsy,amsfonts,amsthm,verbatim}
-\usepackage{graphics}
-\usepackage{fullpage}
-\usepackage{enumerate}
-\usepackage{fancyhdr}
-\usepackage{mathtools}
-\usepackage{tikz-cd}
-%\usepackage{hyperref}
-%\usepackage{algorithm,algorithmic}
-%\usepackage{multirow}
-\usepackage[framemethod=TikZ]{mdframed}
-\mdfdefinestyle{MyFrame}{%
-    linecolor=black,
-    outerlinewidth=1pt,
-    roundcorner=20pt,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
-    innerrightmargin=20pt,
-    innerleftmargin=20pt,
-    backgroundcolor=white}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%PACKAGES
+\usepackage{amsmath,amssymb,mathtools,enumerate,amsthm}
 
-%Page Settings
-\setlength{\voffset}{-0.25in}
-\setlength{\headsep}{0.25in}
-\setlength{\parskip}{.25em}
-\setlength{\parindent}{0em}
-
-\newenvironment{roundbox}
-  {\begin{mdframed}[style=MyFrame]}
-  {\end{mdframed}}
-
-
-%Logical Operators.
-\renewcommand{\implies}{\rightarrow}
-%\newcommand{\lnot}{\neg} %%%%%already defined
-\renewcommand{\lor}{\vee}
-\renewcommand{\land}{\wedge}
-\newcommand{\xor}{\oplus}
-\newcommand{\symmdiff}{\triangle}
-\renewcommand{\iff}{\leftrightarrow}
-\newcommand{\TRUE}{\mathbf{T}}
-\newcommand{\FALSE}{\mathbf{F}}
-\newcommand{\universe}{\mathcal{U}}
-
-
-%Use to separate sections on the same page
-\renewcommand{\bar}{\rule{\textwidth}{1pt}}
-\newcommand{\barbig}{\rule{\textwidth}{3pt}}
-
-%Euclidean metrics???
-\newcommand{\abs}[1]{| #1 |}
-\newcommand{\norm}[1]{|| #1 ||}
-\newcommand{\bigabs}[1]{\left| #1 \right|}
-
-%Used to denote a new problem
-\newcommand{\problem}[1]{\textbf{#1:}}
-
-\newcommand{\skiplines}[1]{\vspace*{ #1 \baselineskip}}
-
-\newcommand{\vecthree}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \\ \end{array}\right)}
-
-\newcommand{\xarrow}[3][]{\overset{ #2 }{\underset{ #1 }{ #3 }}}
-\newcommand{\xlongright}[2][]{\xarrow[ #1 ]{ #2 }{\longrightarrow}}
-\newcommand{\xlongleft}[2][]{\xarrow[ #1 ]{ #2 }{\longleftarrow}}
-
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{prop}[theorem]{Proposition}
-
-\theoremstyle{definition}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem*{notation}{Notation}
-\newtheorem*{observation}{Observation}
-\newtheorem*{convention}{Convention}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem*{example}{Example}
-
-%Common Sets
+%Math Symbols
 \def\N{\mathbb{N}}
-\def\Q{\mathbb{Q}}
-\def\C{\mathbb{C}}
 \def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
 \def\R{\mathbb{R}}
-\def\cP{\mathcal{P}}
-%Used because normal O is dumb
-\def\bigoh{\mathcal{O}}
-\newcommand{\mfp}{\mathfrak{p}}
-\newcommand{\mfm}{\mathfrak{m}}
-\newcommand{\mfq}{\mathfrak{q}}
-\newcommand{\mfa}{\mathfrak{a}}
-\newcommand{\mfb}{\mathfrak{b}}
-\newcommand{\mfN}{\mathfrak{N}}
-\newcommand{\mfR}{\mathfrak{R}}
+\def\C{\mathbb{C}}
+\def\mfp{\mathfrak{p}}
+\def\mfm{\mathfrak{m}}
+\def\mfa{\mathfrak{a}}
+\def\mfb{\mathfrak{b}}
+\def\mfq{\mathfrak{q}}
+\def\tensor{\otimes}
 
+%math commands
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
 
-\newcommand{\ideal}[1]{\langle #1 \rangle}
-\renewcommand{\dh}{\hat{\delta}}
-\newcommand{\Dh}{\hat{\Delta}}
-\newcommand{\tensor}{\otimes}
-\newcommand{\bigtensor}{\bigotimes}
-\newcommand{\dsum}{\oplus}
-\newcommand{\bigdsum}{\bigoplus}
-\newcommand{\cat}{\mathbf}
-
-%arrow hacks
-%Usage: #2 -#4-> #3; #1 optional underneath
-\newcommand{\xrightleftarrows}[4][]{
-\begin{tikzcd}[ampersand replacement=\&] 
-  #2 \arrow[r,shift left, "#4"] 
-     \& #3 
-       \arrow[l,shift left, "#1"]
-\end{tikzcd}}
-
-\newcommand{\cdxrightarrow}[4][]{
-\begin{tikzcd}[ampersand replacement=\&]
-  #2 \arrow{r}{#4}[swap]{#1} 
-    \& #3
-\end{tikzcd}}
-
-\newcommand{\cdxleftarrow}[4][]{
-\begin{tikzcd}[ampersand replacement=\&]
-  #2 
-    \& #3 \arrow{l}{#1}[swap]{#4} 
-\end{tikzcd}}
-
-
-
+%Math Operators
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\Hom}{Hom}
@@ -147,30 +37,17 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT DETAILS
 
-\newcommand{\classname}{CLASS NAME}
-\newcommand{\assignmentname}{ASSIGNMENT NAME}
-\newcommand{\duedate}{DUE DATE}
-\newcommand{\authorname}{Zachary Greif}
+%Title Info
+\title{<TITLE>}
+\author{Zachary Greif}
+\date{\today}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Make the title. This is separate from the document details due to my old header method of doing a title. 
-\title{\classname : \assignmentname}
-\author{\authorname}
-\date{\duedate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\pagestyle{fancyplain}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE
 \maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BODY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-
-\end{document} 
+\end{document}
